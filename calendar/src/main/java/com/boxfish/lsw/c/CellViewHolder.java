@@ -28,6 +28,7 @@ public class CellViewHolder extends RecyclerView.ViewHolder {
             tvStatus.setText("");
             tvDay.setText("");
         } else {
+            itemView.setBackgroundColor(context.getResources().getColor(R.color.gray));
             int dayOfMonth = scheduleDate.dateTime.getDayOfMonth();
             tvDay.setText(String.valueOf(dayOfMonth));
         }

@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         CalendarView calendarView = (CalendarView) findViewById(R.id.calendarView);
-        calendarView.setStartByNowMonth(3);
+        calendarView.setStartByNowMonth(5);
         calendarView.setOnCanlendarDayClickListener(scheduleDate -> Toast.makeText(getApplicationContext(), scheduleDate.dateTime.toString(), Toast.LENGTH_SHORT).show()
         );
     }
