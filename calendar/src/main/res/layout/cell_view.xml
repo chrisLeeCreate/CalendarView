@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="#c5c9c5"
+              android:gravity="center"
+              android:orientation="vertical">
+
+    <TextView
+        android:maxLines="1"
+        android:id="@+id/tv_day"
+        android:layout_width="40dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="7dp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_13"
+        android:textStyle="bold"
+        tools:text="11"/>
+
+    <TextView
+        android:maxLines="1"
+        android:id="@+id/tv_status"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_8"
+        tools:text="scheduled"/>
+</LinearLayout>
