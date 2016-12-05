@@ -117,8 +117,8 @@ public class CalendarView extends RecyclerView {
             }
         }).subscribeOn(Schedulers.computation())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(monthList -> {
-                    calendarAdapter.setData(monthList);
+                .subscribe(arrayList -> {
+                    calendarAdapter.setData(arrayList);
                 });
     }
 
