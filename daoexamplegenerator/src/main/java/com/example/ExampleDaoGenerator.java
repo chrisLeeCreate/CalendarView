@@ -7,7 +7,7 @@ import de.greenrobot.daogenerator.Schema;
 
 public class ExampleDaoGenerator {
     public static void main(String[] args) throws Exception {
-        Schema schema = new Schema(1, "com.boxfish.lishaowei");
+        Schema schema = new Schema(2, "com.boxfish.lishaowei");
         addNote(schema);
         //添加实体类
         new DaoGenerator().generateAll(schema, "/Users/lishaowei/StudioProjects/CalendarView/app/src/main/java-gen");
@@ -19,5 +19,7 @@ public class ExampleDaoGenerator {
         note.addStringProperty("text").notNull();
         note.addStringProperty("comment");
         note.addDateProperty("date");
+        note.addStringProperty("title");
+
     }
 }

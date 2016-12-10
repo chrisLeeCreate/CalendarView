@@ -11,6 +11,7 @@ public class Note {
     private String text;
     private String comment;
     private java.util.Date date;
+    private String title;
 
     public Note() {
     }
@@ -19,11 +20,12 @@ public class Note {
         this.id = id;
     }
 
-    public Note(Long id, String text, String comment, java.util.Date date) {
+    public Note(Long id, String text, String comment, java.util.Date date, String title) {
         this.id = id;
         this.text = text;
         this.comment = comment;
         this.date = date;
+        this.title = title;
     }
 
     public Long getId() {
@@ -58,6 +60,14 @@ public class Note {
 
     public void setDate(java.util.Date date) {
         this.date = date;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 
 }

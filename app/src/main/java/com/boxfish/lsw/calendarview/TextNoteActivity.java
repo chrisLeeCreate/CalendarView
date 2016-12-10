@@ -82,7 +82,7 @@ public class TextNoteActivity extends ListActivity {
         editText.setText("");
         final DateFormat df = DateFormat.getDateTimeInstance(DateFormat.MEDIUM, DateFormat.MEDIUM);
         String comment = "Added on " + df.format(new Date());
-
+        String title = "LSW";
         if (noteText == null || noteText.equals("")) {
             ToastUtils.show(getApplicationContext(), "Please enter a note to add");
         } else {
@@ -91,7 +91,7 @@ public class TextNoteActivity extends ListActivity {
 //            getNoteDao().insert(note);
 //            Log.d(TAG, "Inserted new note, ID: " + note.getId());
 //            cursor.requery();
-            Note note = new Note(null, noteText, comment, new Date());
+            Note note = new Note(null, noteText, comment, new Date(), title);
             getNoteDao().insert(note);
             cursor.requery();
         }
