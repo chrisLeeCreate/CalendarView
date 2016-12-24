@@ -27,6 +27,10 @@ android {
             java.srcDirs = ['src/main/java', 'src/main/java-gen']
         }
     }
+    lintOptions {
+        abortOnError false
+    }
+
 }
 
 dependencies {

@@ -1,5 +1,6 @@
 apply plugin: 'com.android.library'
 apply plugin: 'me.tatarka.retrolambda'
+apply plugin: 'com.novoda.bintray-release'//添加
 android {
     compileSdkVersion 25
     buildToolsVersion "25.0.0"
@@ -23,6 +24,10 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    lintOptions {
+        abortOnError false
+    }
+
 }
 
 dependencies {
@@ -38,4 +43,13 @@ dependencies {
     compile 'io.reactivex:rxjava-math:1.0.0'
     compile 'io.reactivex:rxandroid:1.0.1'
 
+}
+//添加
+publish {
+    userOrg = 'lishaowei'//bintray.com用户名
+    groupId = 'com.boxfish'//jcenter上的路径
+    artifactId = 'calendar'//项目名称
+    publishVersion = '1.0.4'//版本号
+    desc = 'Oh hi, this is a nice description for a project, right?'//描述，不重要
+    website = 'https://github.com/lishaowei/bintary'//网站，不重要；尽量模拟github上的地址，例如我这样的；当然你有地址最好了
 }
